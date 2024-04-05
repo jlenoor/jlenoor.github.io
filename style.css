@@ -590,6 +590,97 @@ footer .contact-form form .form-submit:hover{
 */
 /* MEDIA QUERIES */
 
+@media only screen and (min-width: 100px) and (max-width: 932px) {
+    .container{
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container .navbar{
+        display: none;
+    }
+
+    .container .main-title .title-name h1{
+        font-size: 3.5rem;
+        justify-content: center;
+    }
+
+    .container .main-title .title-description p{
+        font-size: 20px;
+    }
+
+    #scroll-main{
+        margin: 0;
+        padding: 0;
+    }
+
+    .container .main-about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .container .main-about .about-left{
+        display: none;
+    }
+
+    .container .main-about .about-right .about-sub-title p{
+        width: 100%;
+        font-size: 25px;
+        margin-right: 25px;
+        padding: 0;
+    }
+
+    .container .main-about .about-right{
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .container .main-about .about-right .about-sub-description{
+    margin: 0;
+    }
+
+    /* RESUME */
+
+    .container .main-resume .resume-skills{
+        grid-column: 1/ -1;
+    }
+
+    .container .main-resume .resume-education{
+        margin-left: 2.5rem;
+        grid-column: 1/ -1;
+    }
+
+    .container .main-resume .resume-work{
+        margin-left: 0.5rem;
+        grid-column: 1/ -1;
+        padding-bottom: 1rem;
+    }
+
+    .container .main-resume .resume-languages{
+        margin-left: 1rem;
+        grid-column: 1/ -1;
+        margin-top: 0;
+    }
+
+    /* CONTACT */
+    .container footer .form-container{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container footer .form-container .contact-form{
+        width: 100%;
+    }
+
+    .container footer .form-container .contact-form input{
+        width: 100%;
+    }
+  }
+
 @media only screen and (max-width: 480px) {
     footer .contact-form form input{
         padding: 12px;
@@ -985,121 +1076,3 @@ footer .contact-form form .form-submit:hover{
         right: 3rem; 
     }
 }
-
-/* CUSTOM QUERIES */
-
-@media only screen and (min-width: 430px) and (max-width: 932px) {
-    .container .navbar {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .container .main-title .title-description{
-        display: flex;
-        font-size: 32px;
-        background-color: white;
-        justify-content: center;
-        padding: 6px;
-        border-radius: 12px;
-        height: 1em;
-        width: 40vh;
-    }
-    .container .main-title .title-description p{
-        font-size: 1em;;
-    }
-
-    .container .main-title {
-        font-size: 36px;
-    }
-
-    .container .main-about,
-    .container .main-resume {
-        display: block;
-    }
-
-    .container .main-about .about-left img {
-        margin-left: 0;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
-    .container .main-about .about-right {
-        text-align: center;
-    }
-
-    .container .main-about .about-right p,
-    .container .main-resume .resume-title,
-    .container .main-resume .resume-skills {
-        padding: 20px;
-    }
-
-    footer .form-container {
-        grid-template-columns: 100%;
-    }
-
-    footer .contact-form form .form-submit {
-        margin-top: 12px;
-    }
-
-    /* Close button toggle */
-    .btn-close{
-        visibility: visible;
-        z-index: 1000;
-    }
-
-    /* Hamburger toggle with javascript */
-    .navbar.navbar-visible {
-        display: flex; 
-        width: 100%; 
-        height: 100vh; 
-        visibility: visible;
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        background-color: #202124;
-        z-index: 999;
-        transition: 0.6s ease-in;
-        }
-
-        footer{
-            margin-left: 0;
-            padding: 36px;
-            font-family: 'Roboto', sans-serif;
-            padding-top: 7%;
-            padding-bottom: 7%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        footer .contact-form form{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 14px;
-            padding: 16px;
-        }
-        
-        footer .contact-form form input{
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #000;
-            width: 20vh;
-        }
-        
-        footer .contact-form form textarea{
-            margin-top: 16px;
-            border-radius: 16px;
-            border: 1px solid #000;
-        }
-        
-        footer .contact-form form .form-submit{
-            background-color:#7811F7;
-            color: #fff;
-            border: none;
-            border-radius: 30px;
-            margin-top: 18px;
-            cursor: pointer;
-        }
-  }

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+<script>
+    $(document).ready(function () {
+        $('.bar').on('click', function () {
+            $('.borgar').addClass('open');
+            $('.bar').addClass('hide')
+            $('.cross').removeClass('hide')
+        });
+
+        $('.borgar a').on("click", function () {
+            $('.borgar').removeClass('open');
+            $('.bar').removeClass('hide')
+            $('.cross').addClass('hide')
+        });
+
+        $('.cross').on("click", function () {
+            $('.borgar').removeClass('open');
+            $('.bar').removeClass('hide')
+            $('.cross').addClass('hide')
+        });
+    });
+</script>
+
+    <title>My Portfolio</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- HAMBURGER MENU -->
+        <div id="hamburger" class="hamburger" onclick="toggleNavbar()">
+            <i class='bx bx-menu'></i>
+        </div>
+        <div id="cross" class="btn-close hide" onclick="toggleNavbar()">
+            <i class='bx bx-x'></i>
+        </div>
+       
+            <!-- NAVIGATION -->
+        <div id="navbar" class="navbar">
+            <div class="logo">
+                <h1>Jeffrey Lenoor</h1>
+                <img src="/img/profile-img.jpg" alt="profile image">
+                <div class="socials">
+                    <hr>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/jeffrey-lenoor/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                        <li><a href="https://github.com/jlenoor" target="_blank"><i class='bx bxl-github'></i></a></li>
+                        <li><a href="https://gitlab.com/jlenoor" target="_blank"><i class='bx bxl-gitlab'></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#scroll-home" id="btn-home" onclick="hideNavbar()">Home</a></li>
+                    <li><a href="#scroll-main" id="btn-about" onclick="hideNavbar()">About me</a></li>
+                    <li><a href="#scroll-resume" id="btn-resume" onclick="hideNavbar()">Resume</a></li>
+                    <li><a href="#scroll-contact" id="btn-contact" onclick="hideNavbar()">Contact</a></li>
+                </ul>
+            </div>
+            <div class="resume-button">
+                <a href="/resume/CV 2024 - Jeffrey Lenoor.pdf" target="_blank"><button>My Resume in PDF</button></a>
+            </div>
+        </div>
+
+        <!-- TITLE ANIMATION -->
+
+        <div class="main-title" id="scroll-home">
+            
+            <div class="title-name">
+                <h1>Jeffrey Lenoor</h1>
+                <div class="title-description">
+                    <p class="i-am">I am a</p><span class="job-title"><p id="job-title">Full-Stack .NET Developer</p></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT ME -->
+
+        <div class="main-about" id="scroll-main">
+            <div class="about-left">
+                <img src="/img/profile-img.jpg" alt="about me picture">
+            </div>
+            <div class="about-right">
+                <h1>ABOUT.</h1>
+                <div class="about-sub-title">
+                    <p>I'm a Full-Stack .NET Developer based in Idegem, East Flanders.</p>
+                </div>
+                <p>As a junior full-stack .NET developer, I'm driven by a passion for problem-solving and innovation, 
+                    eager to embark on my professional journey. While I may be new to the industry, my dedication to 
+                    learning and growth is unwavering. Proficient in ASP.NET, C#, JavaScript, Angular and SQL Server, 
+                    I'm equipped with the essential skills needed for success in this field. Additionally, 
+                    I'm familiar with SCRUM methodology, ready to collaborate effectively in agile environments. 
+                    Committed to continuous improvement, I actively seek opportunities to expand my knowledge and expertise. 
+                    Let's connect and explore how we can work together to bring your projects to life! Feel free to reach out 
+                    to discuss potential collaborations.</p>
+                <button>CONTACT ME</button>
+            </div>
+        </div>
+
+        <!-- RESUME -->
+
+        <div class="main-resume" id="scroll-resume">
+            <div class="resume-title">
+                <h1>RESUME</h1>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="resume-skills">
+                <h2>SKILLS</h2>
+                <p>ASP.NET</p>
+                <div class="progress-container">
+                    <div class="progress-bar-1">70%</div>
+                  </div>
+                <p>WPF</p>
+                <div class="progress-container">
+                    <div class="progress-bar-2">75%</div>
+                  </div>
+                <p>Angular</p>
+                <div class="progress-container">
+                    <div class="progress-bar-3">75%</div>
+                  </div>
+                <p>HTML</p>
+                <div class="progress-container">
+                    <div class="progress-bar-4">90%</div>
+                  </div>
+                <p>CSS</p>
+                <div class="progress-container">
+                    <div class="progress-bar-5">80%</div>
+                  </div>
+                <p>SQL</p>
+                <div class="progress-container">
+                    <div class="progress-bar-6">70%</div>
+                  </div>
+                <p>Entity Framework</p>
+                <div class="progress-container">
+                    <div class="progress-bar-7">70%</div>
+                  </div>
+                <p>GIT</p>
+                <div class="progress-container">
+                    <div class="progress-bar-8">75%</div>
+                  </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="resume-education">
+                <div class="education-container">
+                    <h2>EDUCATION</h2>
+
+                    <h4>Obelisk</h4>
+                    <p>.NET Developer</p>
+                    <p class="edu-date">oct. 2023 - may 2024</p>
+                </div>
+                <div class="education-container">
+                    <h4>KA Geraardsbergen</h4>
+                    <p>Hoger Secundair onderwijs, Maatschappelijke Veiligheid</p>
+                    <p class="edu-date">2014 - 2015</p>
+                </div>
+                
+            </div>
+
+            <!-- WORK EXPERIENCE -->
+
+            <div class="resume-work">
+                <h2>WORK EXPERIENCE</h2>
+
+                <div class="work-container">
+                    <div class="work-status">
+                        <h4>General Director</h4>
+                        <p>&nbsp;&nbsp;&nbsp;OXLY</p>
+                        <p>&nbsp;&nbsp;&nbsp;apr. 2022 - jun. 2022</p>
+                    </div>
+                    <div class="work-status">
+                        <h4>Support Engineer</h4>
+                        <p>&nbsp;&nbsp;&nbsp;Tobania</p>
+                        <p>&nbsp;&nbsp;&nbsp;mar. 2019 - feb. 2022</p>
+                    </div>
+                    <div class="work-status">
+                        <h4>Safety Guard</h4>
+                        <p>&nbsp;&nbsp;&nbsp;Securitas Belgium</p>
+                        <p>&nbsp;&nbsp;&nbsp;oct. 2016 - mar. 2019</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LANGUAGES -->
+
+            <div class="resume-languages">
+                <h2>LANGUAGES</h2>
+
+                <div class="language-container">
+                    <div class="language-level">
+                        <h4>German</h4><span class="level-detail">- Native</span>
+                    </div>
+                    <div class="language-level">
+                        <h4>Dutch</h4><span class="level-detail">- Native</span>
+                    </div>
+                    <div class="language-level">
+                        <h4>French</h4><span class="level-detail">- Very good</span>
+                    </div>
+                    <div class="language-level">
+                        <h4>English</h4><span class="level-detail">- Very good</span>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+        <!-- CONTACT -->
+
+        <footer id="scroll-contact">
+            <h1>CONTACT</h1>
+            <div class="contact-info">
+                <i class='bx bxs-location-plus'></i>
+                <a href="https://www.google.com/maps/place/Idegem,+9506+Geraardsbergen/@50.8000057,3.9164593,15z/data=!3m1!4b1!4m6!3m5!1s0x47c3a5c093e62fed:0xd5bb3fecca040249!8m2!3d50.7999931!4d3.9267805!16s%2Fg%2F120s1thq?entry=ttu" target="_blank"><p>9506 Idegem (East-Flanders)</p></a>
+                <i class='bx bxs-phone'></i>
+                <a href="tel:+320467868065"><p>+32 (0)467 86 80 65</p></a>
+                <i class='bx bx-envelope'></i>
+                <a href="mailto:jeffreylenoor@hotmail.com"><p>jeffreylenoor@hotmail.com</p></a>
+            </div>
+            <div class="form-container">
+                <div class="contact-map">
+                    <div id="map"></div>
+                </div>
+                <div class="contact-form">
+
+
+                    <form method="POST" id="form">
+
+                        <input type="hidden" name="access_key" value="82906a80-52d3-4dfb-a62a-6696e67f8ab6">
+                    
+                        <label for="">First Name</label>
+                        <input type="text" name="name" required>
+                        <label for="">Last Name</label>
+                        <input type="text" name="name" required>
+                        <label for="">E-Mail</label>
+                        <input type="email" name="email" required>
+                        <textarea name="message" required></textarea>
+                        <div class="h-captcha" data-captcha="true"></div>
+                    
+                        <button type="submit" class="form-submit">Send</button>
+                    
+                        <div id="result"></div>
+                    
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+</html>
